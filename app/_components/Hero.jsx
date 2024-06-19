@@ -18,7 +18,7 @@ function Hero() {
       <div className="mt-8 flex flex-wrap justify-center gap-4">
         <a
           className="block w-full rounded bg-primary px-12 py-3 text-sm font-medium text-white shadow hover:bg-blue-700 focus:outline-none focus:ring active:bg-primary sm:w-auto"
-          href="#"
+          href="/sign-in"
         >
           Get Started
         </a>
@@ -29,6 +29,7 @@ function Hero() {
   width={1000}
   height={700}
   className='-mt-9 rounded-xl border-2'
+  alt='dashboard'
   />
 </section>
   )
