@@ -23,7 +23,6 @@ function DashboardLayout({ children }) {
     const result = await db.select()
     .from(Budget)
     .where(eq(Budget.createdBy,user?.primaryEmailAddress?.emailAddress))
-    console.log(result);
     if(result?.length==0){
       router.replace('/dashboard/budget');
     }

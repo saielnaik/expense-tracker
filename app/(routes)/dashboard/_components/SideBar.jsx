@@ -25,7 +25,7 @@ function SideBar() {
             id:3,
             name: 'Expenses',
             icon: ReceiptText,
-            path: '/dashboard/expenses'
+            path: '/dashboard/allexpenses'
         },
         {
             id:4,
@@ -37,15 +37,10 @@ function SideBar() {
     ]
     const path = usePathname();
     useEffect (() => {
-        console.log(path);
     }, [])
   return (
     <div className='h-screen p-5 border shadow-sm'>
-      <Image src={'/logo.svg'}
-      alt='logo'
-      height={100}
-      width={160}
-      />
+       <h2 className='font-bold text-2xl text-primary bg-blue-100 flex justify-center p-3 border rounded-full shadow-sm hover:text-white hover:bg-blue-300'>Expense Tracker</h2>
       <div className='mt-5'>
         {menuList.map((menu, index) =>(
             <Link href={menu.path}>

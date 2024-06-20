@@ -30,7 +30,6 @@ function BudgetList() {
     .groupBy(Budget.id)
     .orderBy(desc(Budget.id));
     setBudgetList(result);
-    console.log(result);
   }
 
   return (
