@@ -1,7 +1,12 @@
+"use client"
 
+import React from 'react'
 import Image from 'next/image';
-
+import { UserButton, useUser } from '@clerk/nextjs';
 function Hero() {
+
+  const {user, isSignedIn} = useUser();
+
   return (
     <section className="bg-gray-50 flex items-center flex-col">
   <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex ">
@@ -16,12 +21,19 @@ function Hero() {
       </p>
 
       <div className="mt-8 flex flex-wrap justify-center gap-4">
+      {isSignedIn?
         <a
           className="block w-full rounded bg-primary px-12 py-3 text-sm font-medium text-white shadow hover:bg-blue-700 focus:outline-none focus:ring active:bg-primary sm:w-auto"
-          href="/sign-in"
+          href="/dashboard"
         >
           Get Started
-        </a>
+        </a>:
+        <a
+          className="block w-full rounded bg-primary px-12 py-3 text-sm font-medium text-white shadow hover:bg-blue-700 focus:outline-none focus:ring active:bg-primary sm:w-auto"
+          href="/dashboard"
+        >
+          Get Started
+        </a>}
       </div>
     </div>
   </div>
